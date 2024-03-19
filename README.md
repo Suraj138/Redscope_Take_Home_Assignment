@@ -34,6 +34,7 @@ I get this project on Internshala Redscope_Take_Home_Assignment, where I am impl
    - Chrome plugin should not send data if no sessionId is available.
   
    **Impliment Solution**
+   
      Web Server and Web Socket:
      Initially, I created an API route for starting the server, which would incrementally send session IDs (e.g., 1, 2, and so on). Later, I modified the code to obtain the session ID 
      from the client-side WebSocket implemented at `http://localhost:3000/`. This WebSocket notifies all connected clients to start the session. When two clients are connected, the 
