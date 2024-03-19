@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Simple WebSocket Example</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(42, 37, 63);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+
+  .content-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 255, 166);
+    padding: 10px;
+    margin: 30px;
+    text-align: center;
+
+  }
+
+  button {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    background-color: darkslateblue;
+    color: white ;
+  }
+
+
+  .cool_deep_96 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: aqua;
+    letter-spacing: 2px;
+  }
+</style>
+
+<body>
+
+
+  <div class="content-container">
+    <button class="websocket">Start Session</button>
+    <button class="websocket">End Session</button>
+  </div>
+
+  <div class="cool_deep_96">
+    By:- Kuldeep Kumar
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <label for="messageInput"></label>
+        <input type="text" id="messageInput" />
+        <button onclick="sendMessage()">Send</button>
+        <div id="messages"></div> -->
+
+  <script>
+    // const ws = new WebSocket('ws://localhost:3008');
+
+    // console.log(ws);
+
+    // ws.onopen = () => {
+    //   console.log('WebSocket connected');
+    // };
+
+    // ws.onmessage = (event) => {
+    //   const messagesDiv = document.getElementById('messages');
+    //   messagesDiv.innerHTML += `<p>${event.data}</p>`;
+    // }
+
+    // function sendMessage() {
+    //   const messageInput = document.getElementById('messageInput');
+    //   const payload = {
+    //     'type': 'session Id Change',
+    //     'url':window.top.location.href,
+    //     'data': messageInput.value,
+    //   }
+    //   ws.send(JSON.stringify(payload));
+    //   messageInput.value = '';
+    // }
+  </script>
+</body>
+
+</html>

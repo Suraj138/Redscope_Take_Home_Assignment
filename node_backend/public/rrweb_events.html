@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv='Content-Security-Policy'
+          content="script-src 'self'
+        https://www.google.com
+        https://www.gstatic.com
+        https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js
+        https://cdn.jsdelivr.net/npm/rrweb-player@latest/dist/index.js
+        'unsafe-inline';">
+      <title>Dom Mutation Video</title>
+
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.css' />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/rrweb-player@latest/dist/style.css' />
+    <script src='https://cdn.jsdelivr.net/npm/rrweb@latest/dist/rrweb.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/rrweb-player@latest/dist/index.js'></script>
+  </head>
+  <body>
+    <div>
+      <div id='replay_video'>
+    </div>
+  </div>
+
+  </body>
+  <script>
+    const searchParams = new URLSearchParams(window.location.search);
+    const id = searchParams.get('id');
+
+    const apiUrl = `http://localhost:3000/api-rrweb-events?id=${id}`
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      new rrwebPlayer({
+        target: document.getElementById("replay_video"), // customizable root element
+        props: {
+          events: data,
+          UNSAFE_replayCanvas: false,
+          skipInactive: true,
+          inactiveColor: 'rgba(255,167,48,0.98)',
+          showController: true,
+          autoPlay: false,
+          width: 776,
+          height: 164,
+          speed: 1,
+          speedOption: [1, 2, 4, 8, 16],
+        },
+      });
+    })
+    .catch(err => console.error(err));
+  </script>
+</html>

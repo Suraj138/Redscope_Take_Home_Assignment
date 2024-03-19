@@ -1,0 +1,21 @@
+{
+  "name": "node_backend",
+  "version": "1.0.0",
+  "description": "redscope take home test node backend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "fs-extra": "^11.2.0",
+    "install": "^0.13.0",
+    "uuid": "^9.0.1",
+    "ws": "^8.16.0"
+  }
+}
