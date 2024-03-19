@@ -43,7 +43,7 @@ I get this project on Internshala Redscope_Take_Home_Assignment, where I am impl
     Chrome Plugin:
     In the Chrome plugin, I added an `onmessage` event to detect specific session messages. It listens for "setSession" with the payload ID and adds a listener to chrome.runtime. On          receiving "closeSession", it removes the `chrome.runtime` listener.
 
-## Take Home Assignment 3
+  **Take Home Assignment Task 3**
 
   1. Modify the HTML page or use tools like Postman to connect to the WebSocket server and send sessionId.
   2. Simulate scenarios where users click on start and stop session buttons to test functionalities.
@@ -57,7 +57,7 @@ I get this project on Internshala Redscope_Take_Home_Assignment, where I am impl
   - To investigate and fix issues with the rrweb video not working on existing tabs when changing sessionId, you can debug the code to identify any potential issues related to sessionId 
     handling, WebSocket communication, or rrweb configuration. Once identified, you can implement appropriate fixes to address the issue.
 
-### Bonus Points, Part 4
+  **Bonus Points, Part 4**
   - Show sessionId in the Chrome plugin options page.
 
 **Impliment Solution**   
